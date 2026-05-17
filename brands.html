@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Products | PawNinja</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="products.css" />
+    <style>
+        .brand-header {
+            background: #fff5f0;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 50px 50px;
+        }
+        .brand-header h1 { font-size: 3rem; color: #333; text-transform: uppercase; }
+        .brand-header p { color: #666; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img src="images/Logo-01.png" alt="Nimanja Logo" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="our_store.html">Our Store</a>
+                <a href="brands.html" class="active">Brands</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="brand-header">
+        <h1 id="brand-title">Our Brands</h1>
+        <p id="brand-description">Premium selection for your furry friends.</p>
+    </div>
+
+    <div class="container">
+        <div id="brand-catalog-container" class="product-grid">
+            </div>
+    </div>
+
+    <script src="brands.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* store.css */
+
+.store-page {
+    padding-bottom: 80px;
+    background-color: #fcfcfc;
+}
+
+.store-hero {
+    background-color: var(--peach-light);
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.store-hero h1 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Rounded Store Info Card */
+.store-info-card {
+    background: white;
+    padding: 40px;
+    border-radius: 30px; /* Matches your details container */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.info-group {
+    margin-bottom: 35px;
+}
+
+.info-group h3 {
+    color: var(--orange);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-group p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-list li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.hours-list span {
+    font-weight: 700;
+    color: #333;
+    width: 140px;
+    display: inline-block;
+}
+
+.status-tag {
+    display: inline-block;
+    background: #e7f9ee;
+    color: #28a745;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Rounded Map Container */
+.map-container {
+    border-radius: 30px; /* Rounded edges for map */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    min-height: 450px;
+}
+
+.store-wa-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.store-wa-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+    .map-container {
+        height: 400px;
+    }
+}
+
+/* Add these to your store.css */
+
+.branch-section {
+    margin-bottom: 0px; /* Space between each branch block */
+}
+
+.branch-title {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--orange); /* The underline style */
+    display: inline-block;
+}
+
+/* Ensure the grid looks good for repeated use */
+.store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* Mobile Tweak */
+@media (max-width: 992px) {
+    .branch-title {
+        font-size: 1.8rem;
+        display: block;
+        text-align: center;
+    }
+    .branch-section {
+        margin-bottom: 60px;
+    }
+}
+/* store.css */
+
+.map-container {
+    border-radius: 30px; 
+    overflow: hidden; /* CRITICAL: This clips the map to your rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;      /* Takes full height of the grid row */
+    min-height: 450px; /* Ensures it doesn't get too small on laptops */
+    display: flex;     /* Removes any tiny white space at the bottom of the iframe */
+}
+
+.map-container iframe {
+    width: 100% !important;  /* Forces full width */
+    height: 100% !important; /* Forces full height of the container */
+    display: block;
+    border: none;
+}

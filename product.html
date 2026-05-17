@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Products | PawNinja Petshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="products.css" />
+</head>
+
+<body>
+
+ <script src="script.js"></script>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/Logo-01.png" alt="PawNinja Logo" class="logo-img">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="product.html">Products</a>
+        <a href="our_store.html">Our Store</a>
+        <a href="#">Brands</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  </header>
+
+  <main>
+    <!-- Filter & Search -->
+    <section class="filter-bar">
+      <div class="container filter-panel">
+        <form class="filter-search">
+          <input type="text" placeholder="Search by name or category..." />
+          <button type="submit">Search</button>
+        </form>
+        <div class="filter-options">
+          <select>
+            <option>All Categories</option>
+            <option>Dog Food</option>
+            <option>Cat Food</option>
+            <option>Treats</option>
+            <option>Accessories</option>
+            <option>Cage</option>
+          </select>
+
+          <select>
+            <option>Sort by: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+   <section class="products-page">
+    <div class="container"> <div id="catalog-container" class="grid-layout">
+            </div>
+
+        <div class="pagination"></div>
+    </div>
+</section>
+
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-details"></div>
+    </div>
+</div>
+
+ <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="logo footer-logo" href="#">
+          <span class="logo-mark">🐾</span>
+          PawNinja
+        </a>
+
+        <p>
+          A warm and playful pet shop for dogs, cats, and the people who love them.
+        </p>
+      </div>
+
+      <div>
+        <h3>Shop</h3>
+        <a href="#">Dog Food</a>
+        <a href="#">Cat Food</a>
+        <a href="#">Treats</a>
+        <a href="#">Accessories</a>
+      </div>
+
+      <div>
+        <h3>Support</h3>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div>
+        <h3>Visit Us</h3>
+        <p>264 Pet Street, District 7</p>
+        <p>Open daily: 9:00 AM - 10:00 PM</p>
+        <p>Hotline: 0796318868</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>©2026 PawNinja Petshop. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

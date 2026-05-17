@@ -1,0 +1,235 @@
+/* --- Root Variables & Base Styling --- */
+:root {
+  --orange: #ea6526;
+  --peach-light: #fff5f0;
+  --cream: #f9f9f9;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius-md: 12px;
+}
+
+/* --- Filter & Search Bar Section --- */
+.filter-bar {
+  padding: 40px 0 20px;
+  background: var(--peach-light);
+}
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filter-search {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  max-width: 480px;
+}
+
+.filter-search input {
+  flex: 1;
+  min-height: 52px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 999px;
+  padding: 0 20px;
+  font-family: inherit;
+  box-shadow: var(--shadow-soft);
+}
+
+.filter-search button {
+  border: none;
+  border-radius: 999px;
+  padding: 0 26px;
+  background: var(--orange);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.filter-search button:hover {
+  opacity: 0.9;
+}
+
+.filter-options {
+  display: flex;
+  gap: 14px;
+}
+
+.filter-options select {
+  min-height: 52px;
+  border-radius: 999px;
+  border: 2px solid rgba(234, 101, 38, 0.2);
+  background: white;
+  font-family: inherit;
+  padding: 0 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Product Grid (4x4 Logic) --- */
+.products-page {
+  padding: 40px 0;
+  background-color: var(--white);
+}
+
+.grid-layout {
+  display: grid;
+  /* This creates exactly 4 columns on large screens */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--cream);
+}
+
+.product-card h3 {
+  margin: 15px 15px 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product-card .price {
+  margin: 0 15px 10px;
+  font-weight: 900;
+  color: var(--orange);
+  font-size: 1.2rem;
+}
+
+.product-card .tag {
+  display: inline-block;
+  margin: 0 15px 20px;
+  padding: 4px 12px;
+  background: var(--peach-light);
+  color: var(--orange);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+/* --- Pagination Styling --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-btn {
+  padding: 10px 18px;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: 800;
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  background: var(--peach-light);
+}
+
+.page-btn.active {
+  background: var(--orange);
+  color: white;
+}
+
+/* --- Modal Styling --- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 32px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-button:hover { color: #333; }
+
+.whatsapp-btn {
+  display: block;
+  text-align: center;
+  background-color: #25D366;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 800;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover { background-color: #128C7E; }
+
+/* --- Responsive Adjustments --- */
+
+/* Tablets (3 columns) */
+@media (max-width: 1024px) {
+  .grid-layout { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Small Tablets/Phones (2 columns) */
+@media (max-width: 768px) {
+  .grid-layout { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+  .filter-panel { justify-content: center; }
+  .filter-search { max-width: 100%; }
+}
+
+/* Tiny Phones (1 column) */
+@media (max-width: 480px) {
+  .grid-layout { grid-template-columns: 1fr; }
+  .modal-content { margin: 10% auto; padding: 20px; }
+}

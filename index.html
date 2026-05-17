@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nimanja Petshop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="search.css" />
+  
+  
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/Logo-01.png" alt="PawNinja Logo" class="logo-img">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="product.html">Products</a>
+        <a href="our_store.html">Our Store</a>
+        <a href="#">Brands</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Fresh food. Happy pets.</span>
+          <h1>Everything your pet needs, delivered with love.</h1>
+          <p>
+            Discover nutritious food, playful toys, cozy beds, and daily care
+            essentials for dogs and cats. Curated for healthier, happier pets.
+          </p>
+          <div class="hero-actions">
+            <a href="product.html" class="btn primary">Shop Products</a>
+            <a href="#" class="btn secondary">Explore Brands</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card hero-card-large">
+            <img src="https://www.scripps.org/sparkle-assets/images/dogs_cats_rabbits_pets_1200x750-e017741227f7382c3ba7aaeb27b28297.jpg" alt="Pets">
+          </div>
+          <div class="floating-note note-one"><strong>30%</strong> off treats</div>
+          <div class="floating-note note-two">Free shipping <strong>over RM40</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <div class="container" style="position: relative;">
+        <form class="search-panel" id="home-search-form">
+          <input type="text" id="home-search-input" placeholder="Search food, toys, treats, beds..." autocomplete="off" />
+          <button type="submit">Search</button>
+        </form>
+        <div id="search-results-dropdown" class="search-results-dropdown"></div>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span>Shop by pet</span>
+          <h2>Find the right products faster</h2>
+        </div>
+        <div class="pet-category-grid">
+          <article class="pet-category-card dog-card" onclick="window.location.href='product.html?category=Dog'">
+            <div>
+              <span class="card-label">For Dogs</span>
+              <h3>Food, treats, toys, and comfort essentials.</h3>
+              <a href="product.html?category=DogFood">Shop dog products →</a>
+            </div>
+            <img src="https://www.petexpress.com.ph/cdn/shop/articles/golden_retriever_5f91f61d-2e1b-4494-a8f2-0249e1888bbc_1200x.jpg?v=1772696052" alt="Dogs">
+          </article>
+
+          <article class="pet-category-card cat-card" onclick="window.location.href='product.html?category=Cat'">
+            <div>
+              <span class="card-label">For Cats</span>
+              <h3>Healthy meals, litter, scratchers, and cozy beds.</h3>
+              <a href="product.html?category=Cat">Shop cat products →</a>
+            </div>
+            <img src="https://i.guim.co.uk/img/media/327aa3f0c3b8e40ab03b4ae80319064e401c6fbc/377_133_3542_2834/master/3542.jpg?width=700&quality=85&auto=format&fit=max&s=6358df6dcb66158b5227b0c4444902e7" alt="Cats">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>Popular this week</span>
+          <h2>Fresh picks for furry friends</h2>
+        </div>
+        <div class="featured-grid">
+          <article class="featured-card tall-card">
+            <img 
+              src="[images.unsplash.com](https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=700&q=80)" 
+              alt="Dog food"
+            >
+            <div class="featured-content">
+              <span>Natural nutrition</span>
+              <h3>Balanced food made with real ingredients</h3>
+              <a href="#">View food →</a>
+            </div>
+          </article>
+          <article class="featured-card cream-card">
+            <span class="tag">Best Value</span>
+            <h3>Save more on large food bags</h3>
+            <p>Perfect for multi-pet homes and monthly restocks.</p>
+            <a href="#">Shop bulk deals →</a>
+          </article>
+          <article class="featured-card image-side-card">
+            <div>
+              <span>Dental Care</span>
+              <h3>Fresh breath and healthier teeth</h3>
+              <a href="#">Shop dental kits →</a>
+            </div>
+            <img 
+              src="[images.unsplash.com](https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80)" 
+              alt="Dog dental care"
+            >
+          </article>
+          <article class="featured-card orange-card">
+            <span class="tag light">New Arrivals</span>
+            <h3>Cozy beds for peaceful naps</h3>
+            <p>Soft, washable, and made for everyday comfort.</p>
+            <a href="#">Explore beds →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+<section class="care-section">
+      <div class="container care-panel">
+        <div class="care-copy">
+          <span class="eyebrow">Pet care made simple</span>
+          <h2>Healthy routines start with the right essentials.</h2>
+          <p>
+            From daily meals to grooming tools and calming beds, our collections
+            help you build a better routine for your pet at home.
+          </p>
+          <a href="#" class="btn primary">Learn More</a>
+        </div>
+        <div class="care-benefits">
+          <article>
+            <span>💬</span>
+            <h3>Friendly Support</h3>
+            <p>Helpful guidance for choosing the right products.</p>
+          </article>
+          <article>
+            <span>📦</span>
+            <h3>Fast Delivery</h3>
+            <p>Essentials shipped quickly to your doorstep.</p>
+          </article>
+          <article>
+            <span>⭐</span>
+            <h3>Quality Picks</h3>
+            <p>Products selected with comfort and wellness in mind.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="brand-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span>Trusted names</span>
+          <h2>Popular pet brands</h2>
+        </div>
+        <div class="brand-grid">
+          <div class="brand-grid">
+    <div class="brand-grid">
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=Catchy'">
+            <img src="images/brands/catchy.png" alt="Catchy Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=CIAO'">
+            <img src="images/brands/ciao.png" alt="CIAO Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=DoggyMan'">
+            <img src="images/brands/doggyman.png" alt="DoggyMan Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=Gemon'">
+            <img src="images/brands/gemon.png" alt="Gemon Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=Keos'">
+            <img src="images/brands/keos.png" alt="Keos Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=Royal Canin'">
+            <img src="images/brands/royal-canin.png" alt="Royal Canin Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=meO'">
+            <img src="images/brands/meo.png" alt="meO Logo">
+        </div>
+
+        <div class="brand-card" onclick="window.location.href='brands.html?brand=MR.VET'">
+            <img src="images/brands/mrvet.png" alt="MR.VET Logo">
+        </div>
+    </div>
+</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="logo footer-logo" href="#">
+          <img src="images/Logo-01.png" alt="PawNinja" style="height: 40px; margin-bottom: 10px;">
+        </a>
+        <p>A warm and playful pet shop for dogs, cats, and the people who love them.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <a href="product.html">All Products</a>
+        <a href="product.html?category=Treats">Treats</a>
+        <a href="product.html?category=Food">Pet Food</a>
+      </div>
+      <div>
+        <h3>Visit Us</h3>
+        <p>Sibu Office: 084-318868</p>
+        <p>Open daily: 9:00 AM - 10:00 PM</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>©2026 PawNinja Petshop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="home-search.js"></script>
+
+  
+</body>
+</html>
